@@ -23,6 +23,10 @@
     font-size: 62.5%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
@@ -37,21 +41,21 @@ img {
 }
 
 header,
-main {
+.wrapper {
     padding-inline: 10%; 
 }
 
 main {
-    padding-top: 16rem;
     display: grid;
-    gap: 12rem;
+    padding-top: 9rem;
 }
 
-section {
+section .wrapper {
+    padding-block: 12rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    gap: 7%;
+    gap: 10%;
 }
 
 h2 {
@@ -66,6 +70,22 @@ p {
     font-family: 'poppins', sans-serif;
 }
 
+/* ============= BACK UP BUTTON  ================================================================== */
+#backUpButton {
+    position: fixed;
+    bottom: -6rem;
+    right: 1rem;
+    transition: 600ms;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 100%;
+}
+
+#backUpButton.scroll {
+    display: block;
+    transform: translateY(-6.5rem);
+}
+
 /* ============= HEADER ================================================================== */
 #navigation {
     position: fixed;
@@ -78,6 +98,10 @@ p {
     background-color: #fff;
 }
 
+#navigation.scroll {
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.2);
+}
+
 #navigation .menu .menu-container {
     display: flex;
     gap: 4rem;
@@ -87,6 +111,25 @@ p {
     color: var(--gray-n7);
     font-size: 2rem;
     font-weight: 500;
+    transition: color 400ms;
+    height: 100%;
+}
+
+#navigation .menu .menu-container li a:hover {
+    color: var(--primary-color);
+}
+
+#navigation .menu .menu-container li a::after {
+    content: '';
+    width: 0%;
+    height: .2rem;
+    background-color: var(--primary-color);
+    display: block;
+    transition: width 300ms;
+}
+
+#navigation .menu .menu-container li a:hover::after {
+    width: 100%;
 }
 
 /* ============= SECTION PRESENTATION ================================================================== */
@@ -163,6 +206,7 @@ p {
     font-family: 'poppins', sans-serif;
     position: absolute;
     right: calc(100% + 2rem);
+    top: .9rem;
     font-size: 1.6rem;
     font-weight: 500;
     color: var(--gray-n6);
@@ -210,18 +254,21 @@ p {
 
 /* ============= HEADER ================================================================== */
 #skills {
-    padding-block: 12rem;
     position: relative;
 }
 
 #skills::before {
     position: absolute;
     content: "";
-    width: calc(100% + (2/10 * 100vw));
+    width: 100%;
     height: 100%;
-    left: calc(-10.15/100 * 100vw);
     background-color: var(--gray-n9);
     z-index: -1;
+}
+
+#skills .wrapper {
+    padding-block: 12rem;
+
 }
 
 #skills .section-title h2 {
@@ -252,6 +299,21 @@ p {
 #skills .skills-container .skills {
     display: grid;
     gap: 2rem;
+}
+
+#skills .skills-container .skills .skills-title {
+    position: relative;
+}
+
+#skills .skills-container .skills .skills-title::before {
+    position: absolute;
+    content: "";
+    top: .8rem;
+    left: -2rem;
+    width: .8rem;
+    height: .8rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
 }
 
 #skills .skills-container .skills .skills-title h3 {
@@ -298,8 +360,8 @@ p {
 
 #education .section-content::before {
     content: '';
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 13px;
+    height: 13px;
     left: -.8rem;
     top: -.6rem;
     background-image: url("./assets/icons/decoration.svg");
@@ -308,11 +370,12 @@ p {
 
 #education .section-content::after {
     content: '';
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 13px;
+    height: 13px;
     right: -.8rem;
     bottom: -.6rem;
     background-image: url("./assets/icons/decoration2.svg");
+    background-size: cover;
     position: absolute;
 }
 
@@ -387,7 +450,7 @@ p {
 
 #education .courses-container .courses-content {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 #education .courses-container .courses-content .course {
@@ -430,18 +493,20 @@ p {
 
 /* ============= SECTION CONTACT ================================================================== */
 #contacts {
-    padding-block: 12rem;
     position: relative;
 }
 
 #contacts::before {
     position: absolute;
     content: "";
-    width: calc(100% + (2/10 * 100vw));
+    width: 100%;
     height: 100%;
-    left: calc(-10.15/100 * 100vw);
     background-color: #000;
     z-index: -1;
+}
+
+#contacts .wrapper {
+    padding-block: 12rem;
 }
 
 #contacts .section-title h2 {
@@ -456,8 +521,8 @@ p {
 
 #contacts .section-content::before {
     content: '';
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 13px;
+    height: 13px;
     right: -.8rem;
     top: -.6rem;
     background-image: url("./assets/icons/decoration3.svg");
@@ -466,8 +531,8 @@ p {
 
 #contacts .section-content::after {
     content: '';
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 13px;
+    height: 13px;
     right: -.8rem;
     bottom: -.6rem;
     background-image: url("./assets/icons/decoration2.svg");
@@ -521,4 +586,21 @@ p {
     width: 3.2rem;
 }
 
-/* ============= HEADER ================================================================== */
+@media (max-width: 1240px) {
+    :root {
+        font-size: 56.25%;
+    }
+
+    header,
+    .wrapper {
+        padding-inline: 5%;
+    }
+
+    #navigation {
+        padding-block: 3rem;
+    }
+
+    #navigation .logo img {
+        height: 4.48rem;
+    }
+}
