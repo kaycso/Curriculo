@@ -1,0 +1,84 @@
+#contacts {
+    position: relative;
+    background-color: #000;
+}
+
+#contacts .wrapper {
+    padding-block: 12rem;
+}
+
+#contacts .section-title h2 {
+    color: var(--gray-n8);
+}
+
+#contacts .section-content {
+    gap: 4rem;
+    position: relative;
+}
+
+#contacts .section-content::before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    right: -.8rem;
+    top: -.6rem;
+    background-image: url("./assets/icons/decoration3.svg");
+    position: absolute;
+}
+
+#contacts .section-content::after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    right: -.8rem;
+    bottom: -.6rem;
+    background-image: url("./assets/icons/decoration2.svg");
+    position: absolute;
+}
+
+#contacts .section-content h3 {
+    color: var(--gray-n1);
+    font-size: 2.4rem;
+}
+
+#contacts .contacts-container {
+    display: grid;
+    gap: 3rem;
+}
+
+#contacts .contacts-container .contact {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#contacts .contacts-container .contact img {
+    position: absolute;
+    left: -3rem;
+}
+
+#contacts .contacts-container .contact p {
+    color: var(--gray-n2);
+    font-size: 2rem;
+}
+
+#contacts .social-links {
+    display: grid;
+    gap: 1.5rem;
+}
+
+#contacts .social-links h4 {
+    color: var(--gray-n5);
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+#contacts .social-links .links {
+    display: flex;
+    gap: 2.4rem;
+}
+
+#contacts  .social-links .links a img {
+    width: 3.2rem;
+}

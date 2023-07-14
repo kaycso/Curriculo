@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #7100EA;
+    --gradient-line: linear-gradient(90deg, #8100EA, #43008A);
+    --gradient-column: linear-gradient(#8100EA, #43008A);
+    --gray-n1: #F0F0F0;
+    --gray-n2: #D6D6D6;
+    --gray-n3: #B3B3B3;
+    --gray-n4: #8F8F8F;
+    --gray-n5: #6B6B6B;
+    --gray-n6: #474747;
+    --gray-n7: #363636;
+    --gray-n8: #242424;
+    --gray-n9: #121212;
+    font-size: 62.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    color: var(--gray-n9);
+}
+
+.wrapper {
+    max-width: 125rem; 
+    margin: 0 auto;
+    padding-inline: 3.6rem;
+}
+
+main {
+    display: grid;
+    padding-top: 9rem;
+}
+
+section .wrapper {
+    padding-block: 12rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 12rem;
+}
+
+section .section-content {
+    display: grid;
+    gap: 6rem;
+}
+
+section .section-content > p {
+    font-size: 2.4rem;
+    font-family: 'poppins', sans-serif;
+}
+
+section .section-content > p span {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 12.8rem;
+    line-height: 12.8rem;
+    text-transform: uppercase;
+    word-break: break-all;
+    max-width: 36rem;
+}

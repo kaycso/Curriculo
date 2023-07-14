@@ -1,0 +1,77 @@
+#skills {
+    position: relative;
+    background-color: var(--gray-n9);
+}
+
+#skills .wrapper {
+    padding-block: 12rem;
+
+}
+
+#skills .section-title h2 {
+    color: #000;
+    text-shadow: 0 1rem 1rem #000;
+}
+
+#skills .section-content > p {
+    color: #fff;
+}
+
+#skills .section-content > p span {
+    color: var(--primary-color);
+}
+
+#skills .skills-container {
+    display: grid;
+    gap: 4rem;
+}
+
+#skills .skills-container .skills {
+    display: grid;
+    gap: 2rem;
+}
+
+#skills .skills-container .skills .skills-title {
+    position: relative;
+}
+
+#skills .skills-container .skills .skills-title::before {
+    position: absolute;
+    content: "";
+    top: .8rem;
+    left: -2rem;
+    width: .8rem;
+    height: .8rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+}
+
+#skills .skills-container .skills .skills-title h3 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#skills .skills-container .skills .skills-card {
+    background-color: var(--gray-n8);
+    border-radius: .5rem;
+    padding: 2rem;
+    font-weight: 700;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#skills .skills-container .skills .skills-card .skill,
+#skills .skills-container .skills .skills-card .skill h4 {
+    color: var(--gray-n2);
+    font-size: 2rem;
+    max-width: 10ch;
+}
+
+#skills .skills-container .skills .skills-card .skill p {
+    color: var(--gray-n4);
+    font-size: 1.8rem;
+}

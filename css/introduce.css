@@ -1,0 +1,40 @@
+#introduce .photo {
+    max-width: 36rem;
+}
+
+#introduce .section-content {
+    gap: 0;
+}
+
+#introduce .technologies {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#introduce .content-title h1{
+    color: var(--gray-n9);
+    font-size: 7.2rem;
+    font-weight: 700;
+    position: relative;
+}
+
+#introduce .content-title h1::after {
+    content: "";
+    position: absolute;
+    width: 11rem;
+    height: 1rem;
+    bottom: 0;
+    left: 0;
+    background-image: var(--gradient-line);
+}
+
+#introduce .social-links ul {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem ;
+}
+
+#introduce .social-links ul img {
+    width: 4.4rem ;
+}

@@ -16,10 +16,10 @@ function showHeaderShaddow() {
 }
 
 function showBackToTopButtonOnScroll() {
-    const backUpButton = document.getElementById('backUpButton') 
+    const backToTopButton = document.getElementById('backToTopButton') 
     if (scrollY > 600) {
-        backUpButton.classList.add('scroll')
+        backToTopButton.classList.add('scroll')
     } else {
-        backUpButton.classList.remove('scroll')
+        backToTopButton.classList.remove('scroll')
     }
 }

@@ -9,33 +9,36 @@
 </head>
 <body>
     <header id="navigation">
-        <div class="logo">
-            <img src="./assets/nameLogo.svg" alt="Kayc Oliveira">
+        <div class="wrapper">
+            <div class="container">
+                <div class="logo">
+                    <img src="./assets/nameLogo.svg" alt="Kayc Oliveira">
+                </div>
+                <nav>
+                    <ul class="menu">
+                        <li><a class="menu-link" href="#experience">Experiência</a></li>
+                        <li><a class="menu-link" href="#skills">Habilidades</a></li>
+                        <li><a class="menu-link" href="#education">Formação</a></li>
+                        <li><a class="menu-link" href="#contacts">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <nav class="menu">
-            <ul class="menu-container">
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#skills">Habilidades</a></li>
-                <li><a href="#education">Formação</a></li>
-                <li><a href="#contacts">Contato</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <section id="presentation">
+        <section id="introduce" aria-label="Apresentação">
             <div class="wrapper">
-
                 <div class="photo">
                     <img src="./assets/img/photo2.jpg" alt="minha foto">
                 </div>
                 <div class="section-content">
                     <ul class="technologies">
                         <li><img src="./assets/icons/technologies/html5.svg" alt="HTML"></li>
-                        <li><img src="./assets/icons/technologies/css3.svg" alt="HTML"></li>
-                        <li><img src="./assets/icons/technologies/javascript.svg" alt="HTML"></li>
-                        <li><img src="./assets/icons/technologies/figma.svg" alt="HTML"></li>
-                        <li><img src="./assets/icons/technologies/sql.svg" alt="HTML"></li>
+                        <li><img src="./assets/icons/technologies/css3.svg" alt="CSS"></li>
+                        <li><img src="./assets/icons/technologies/javascript.svg" alt="JavaScript"></li>
+                        <li><img src="./assets/icons/technologies/figma.svg" alt="Figma"></li>
+                        <li><img src="./assets/icons/technologies/sql.svg" alt="SQL"></li>
                     </ul>
                     <div class="content-title">
                         <h1>Desenvolvedor <br>Front End</h1>
@@ -50,7 +53,7 @@
             </div>
         </section>
 
-        <section id="experience">
+        <section id="experience" aria-label="experiência">
             <div class="wrapper">
                 <div class="section-title">
                     <h2>experiência</h2>
@@ -110,7 +113,7 @@
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" aria-label="Habilidades">
             <div class="wrapper">
                 <div class="section-title">
                     <h2>habilidades</h2>
@@ -176,7 +179,7 @@
             </div>
         </section>
 
-        <section id="education">
+        <section id="education" aria-label="Formação">
             <div class="wrapper">
                 <div class="section-title">
                     <h2>Formação</h2>
@@ -228,7 +231,7 @@
             </div>
         </section>
 
-        <section id="contacts">
+        <section id="contacts" aria-label="Contato">
             <div class="wrapper">
                 <div class="section-title">
                     <h2>Contato</h2>
@@ -257,7 +260,7 @@
         </section>
     </main>
 
-    <a id="backUpButton" href="#presentation"><img src="./assets/icons/arrow-button.svg" alt="voltar para o topo da página"></a>
+    <a id="backToTopButton" href="#introduce"><img src="./assets/icons/arrow-button.svg" alt="voltar para o topo da página"></a>
 
     <script src="./main.js"></script>
 </body>
